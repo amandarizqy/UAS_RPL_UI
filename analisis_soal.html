@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Analisis Butir Soal</title>
+    <style>
+        body { 
+            background-color: #6A4F6E; 
+            background-image: radial-gradient(circle, #857486 20%, transparent 20%); 
+            background-size: 80px 80px; 
+        }
+    </style>
+</head>
+<body class="pb-10 min-h-screen">
+    <div class="p-6 flex items-center text-white">
+        <a href="bank_soal.html" class="flex items-center active:scale-95 transition-transform">
+            <i class="fas fa-chevron-left text-2xl mr-4"></i>
+            <span class="text-2xl font-bold uppercase tracking-widest">BACK</span>
+        </a>
+    </div>
+
+    <div class="px-6">
+        <div class="bg-white/90 rounded-3xl p-6 mb-6 shadow-lg border-b-4 border-[#6D5471]">
+            <p class="text-xs font-bold text-purple-600 mb-2 uppercase tracking-wider">Analisis Statistik</p>
+            <h1 class="text-lg font-bold text-gray-800 leading-snug">
+                "How many students in your class _ from Korea?"
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-green-50 rounded-3xl p-5 border-2 border-green-200 text-center">
+                <i class="fas fa-check-circle text-green-500 text-2xl mb-2"></i>
+                <h2 class="text-2xl font-black text-green-700">65%</h2>
+                <p class="text-[10px] text-green-600 font-bold uppercase">Menjawab Benar</p>
+            </div>
+            <div class="bg-red-50 rounded-3xl p-5 border-2 border-red-200 text-center">
+                <i class="fas fa-times-circle text-red-500 text-2xl mb-2"></i>
+                <h2 class="text-2xl font-black text-red-700">35%</h2>
+                <p class="text-[10px] text-red-600 font-bold uppercase">Menjawab Salah</p>
+            </div>
+        </div>
+
+        <div class="bg-white/90 rounded-[35px] p-6 shadow-xl space-y-6">
+            <h3 class="font-bold text-gray-800 flex items-center gap-2">
+                <i class="fas fa-poll"></i> Persebaran Jawaban
+            </h3>
+
+            <div class="space-y-5">
+                <div class="relative">
+                    <div class="flex justify-between text-xs font-bold mb-1">
+                        <span class="text-gray-700">A. Comes</span>
+                        <span class="text-gray-500">15%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-gray-400 h-3 rounded-full" style="width: 15%"></div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="flex justify-between text-xs font-bold mb-1">
+                        <span class="text-green-600">B. Come (Kunci)</span>
+                        <span class="text-green-600">65% <i class="fas fa-crown ml-1"></i></span>
+                    </div>
+                    <div class="w-full bg-green-100 rounded-full h-3 border border-green-200">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 65%"></div>
+                    </div>
+                    <p class="text-[9px] text-green-700 mt-1 font-bold">*Pilihan paling banyak dijawab</p>
+                </div>
+
+                <div class="relative">
+                    <div class="flex justify-between text-xs font-bold mb-1">
+                        <span class="text-gray-700">C. Are coming</span>
+                        <span class="text-gray-500">10%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-gray-400 h-3 rounded-full" style="width: 10%"></div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="flex justify-between text-xs font-bold mb-1">
+                        <span class="text-gray-700">D. Came</span>
+                        <span class="text-gray-500">10%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-gray-400 h-3 rounded-full" style="width: 10%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 bg-[#6D5471] p-6 rounded-[30px] text-white shadow-lg">
+            <h4 class="font-bold mb-2 flex items-center gap-2">
+                <i class="fas fa-lightbulb text-yellow-300"></i> Analisis Cepat
+            </h4>
+            <p class="text-xs leading-relaxed opacity-90">
+                Sebagian besar mahasiswa (65%) memahami penggunaan subject-verb agreement pada kalimat tanya. Namun, 15% mahasiswa masih terkecoh dengan penggunaan 'Comes' (Singular) yang menunjukkan kebingungan pada penentuan subjek 'students'.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

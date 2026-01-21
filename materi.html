@@ -11,20 +11,20 @@
     <div class="relative h-64">
         <img src="foto_figma/materi1.png" class="w-full h-full object-cover">
         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 to-transparent p-6">
-            <a href="materi_quiz.html" class="text-white text-2xl">
+            <a href="materi_quiz.html" class="text-white text-2xl active:scale-90 transition-transform inline-block">
                 <i class="fas fa-arrow-left"></i>
             </a>
         </div>
     </div>
 
-    <div class="bg-white rounded-t-[40px] -mt-10 relative z-10 p-8">
+    <div class="bg-white rounded-t-[40px] -mt-10 relative z-10 p-8 shadow-2xl">
         <div class="flex justify-between items-start mb-6">
             <div>
                 <h1 class="text-2xl font-bold text-gray-800">Computer Science</h1>
                 <p class="text-purple-600 font-semibold">Ilmu Komputer • Modul 1</p>
             </div>
-            <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-bold">
-                <i class="fas fa-star"></i> 4.5
+            <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-bold flex items-center">
+                <i class="fas fa-star mr-1"></i> 4.5
             </div>
         </div>
 
@@ -44,8 +44,13 @@
             </p>
         </article>
 
-        <div class="mt-10">
-            <a href="quiz.html" class="block w-full bg-[#E57373] text-white text-center py-4 rounded-2xl font-bold text-lg shadow-lg">
+        <div class="mt-10 flex flex-col gap-4">
+            <a href="path/ke/file_materi.pdf" download class="flex items-center justify-center w-full bg-white border-2 border-[#6D5471] text-[#6D5471] py-4 rounded-2xl font-bold text-lg shadow-md active:scale-95 transition-all">
+                <i class="fas fa-download mr-3"></i>
+                Download Materi (PDF)
+            </a>
+
+            <a href="quiz.html" class="block w-full bg-[#E57373] text-white text-center py-4 rounded-2xl font-bold text-lg shadow-lg active:scale-95 transition-all">
                 Mulai Quiz Sekarang
             </a>
         </div>

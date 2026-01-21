@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Bank Soal</title>
+    <style>
+        body { 
+            background-color: #6A4F6E; 
+            background-image: radial-gradient(circle, #857486 20%, transparent 20%); 
+            background-size: 80px 80px; 
+        }
+    </style>
+</head>
+<body class="pb-24 min-h-screen">
+    <div class="p-6 flex items-center text-white">
+        <a href="beranda_dsn.html" class="flex items-center active:scale-95 transition-transform">
+            <i class="fas fa-chevron-left text-2xl mr-4"></i>
+            <span class="text-2xl font-bold uppercase tracking-widest">BACK</span>
+        </a>
+    </div>
+
+    <div class="px-6">
+        <div class="bg-white/90 rounded-xl p-4 mb-8 shadow-md text-center border-b-4 border-[#6D5471]">
+            <h1 class="text-2xl font-bold text-gray-800 uppercase tracking-wide">Bank Soal</h1>
+        </div>
+
+        <div class="relative mb-6">
+            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input type="text" placeholder="Cari soal..." class="w-full pl-12 pr-4 py-3 rounded-full bg-white/80 focus:outline-none focus:ring-2 ring-[#6D5471]/30 shadow-inner text-sm">
+        </div>
+
+        <div class="space-y-4">
+            <div class="bg-white/90 rounded-[35px] p-6 shadow-lg border-l-8 border-[#6D5471]">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[10px] font-bold text-purple-600 bg-purple-100 px-3 py-1 rounded-full uppercase">Bahasa Inggris</span>
+                    <div class="flex gap-4 text-gray-500">
+                        <a href="edit_soal.html" title="Edit Soal" class="hover:text-blue-500 transition-colors">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <button title="Hapus Soal" class="hover:text-red-500 transition-colors"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <h2 class="text-lg font-bold text-gray-800 leading-snug mb-3">How many students in your class _ from Korea?</h2>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="grid grid-cols-2 gap-2 text-[10px] text-gray-600">
+                        <p><i class="fas fa-check-circle text-green-500 mr-1"></i> Jawaban: Come</p>
+                        <p><i class="fas fa-clock mr-1"></i> Durasi: 30s</p>
+                    </div>
+                    
+                    <a href="analisis_soal.html" class="flex items-center justify-center gap-2 w-full py-2 bg-[#6D5471]/10 border border-[#6D5471] text-[#6D5471] rounded-xl text-xs font-bold hover:bg-[#6D5471] hover:text-white transition-all active:scale-95">
+                        <i class="fas fa-chart-bar"></i>
+                        Analisis Butir Soal
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-[35px] p-6 shadow-lg border-l-8 border-[#6D5471]">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-[10px] font-bold text-purple-600 bg-purple-100 px-3 py-1 rounded-full uppercase">Struktur Data</span>
+                    <div class="flex gap-4 text-gray-500">
+                        <a href="edit_soal.html" class="hover:text-blue-500 transition-colors"><i class="fas fa-edit"></i></a>
+                        <button class="hover:text-red-500 transition-colors"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <h2 class="text-lg font-bold text-gray-800 leading-snug mb-3">Manakah di bawah ini yang merupakan struktur data non-linear?</h2>
+                <div class="flex flex-col gap-4">
+                    <div class="grid grid-cols-2 gap-2 text-[10px] text-gray-600">
+                        <p><i class="fas fa-check-circle text-green-500 mr-1"></i> Jawaban: Graph</p>
+                        <p><i class="fas fa-clock mr-1"></i> Durasi: 45s</p>
+                    </div>
+                    <a href="analisis_soal.html" class="flex items-center justify-center gap-2 w-full py-2 bg-[#6D5471]/10 border border-[#6D5471] text-[#6D5471] rounded-xl text-xs font-bold hover:bg-[#6D5471] hover:text-white transition-all active:scale-95">
+                        <i class="fas fa-chart-bar"></i>
+                        Analisis Butir Soal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="tambah_soal.html" class="fixed bottom-8 right-8 w-16 h-16 bg-[#FCE4EC] rounded-full flex items-center justify-center shadow-2xl active:scale-90 transition-all border-4 border-white">
+        <i class="fas fa-plus text-2xl text-gray-600"></i>
+    </a>
+</body>
+</html>

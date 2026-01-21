@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Nilai & Analisis Kuis</title>
+    <style>
+        body { 
+            background-color: #6A4F6E; 
+            background-image: radial-gradient(circle, #857486 20%, transparent 20%); 
+            background-size: 100px 100px; 
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="pb-10">
+
+    <div class="p-6 flex items-center text-white">
+        <a href="beranda_mhs.html" class="flex items-center active:scale-95 transition-transform">
+            <i class="fas fa-chevron-left text-2xl mr-4"></i>
+            <span class="text-2xl font-bold uppercase tracking-widest">BACK</span>
+        </a>
+    </div>
+
+    <div class="px-6 mb-8">
+        <h1 class="text-3xl font-bold text-white mb-6">Rekap Nilai Kuis</h1>
+
+        <div class="bg-white rounded-3xl p-6 mb-8 shadow-xl">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Analisis Hasil Kuis Anda</h2>
+            <p class="text-gray-600 mb-4">
+                Berikut adalah ringkasan performa Anda di semua kuis.
+            </p>
+            <div class="flex items-center mb-2">
+                <span class="text-purple-600 font-bold w-1/2">Rata-rata Skor:</span>
+                <span class="text-purple-800 font-bold text-lg">85.5 pt</span>
+            </div>
+            <div class="flex items-center mb-2">
+                <span class="text-green-600 font-bold w-1/2">Kuis Terselesaikan:</span>
+                <span class="text-green-800 font-bold text-lg">10 dari 12</span>
+            </div>
+            <div class="flex items-center mb-2">
+                <span class="text-red-600 font-bold w-1/2">Area Peningkatan:</span>
+                <span class="text-red-800 font-bold text-lg">Tata Bahasa Inggris</span>
+            </div>
+            <button class="w-full bg-[#E57373] text-white py-3 rounded-xl font-bold text-lg mt-6 shadow-md active:scale-95 transition-transform">
+                Lihat Detail Analisis
+            </button>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Daftar Kuis</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl shadow-sm">
+                    <div>
+                        <p class="font-bold text-gray-800">Quiz: Belajar Bahasa Inggris</p>
+                        <p class="text-sm text-gray-500">Tanggal: 12 Okt 2023</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-lg font-bold text-green-600">90 pt</span>
+                        <p class="text-xs text-gray-400">18/20 Benar</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl shadow-sm">
+                    <div>
+                        <p class="font-bold text-gray-800">Quiz: Pengantar Algoritma</p>
+                        <p class="text-sm text-gray-500">Tanggal: 05 Okt 2023</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-lg font-bold text-green-600">85 pt</span>
+                        <p class="text-xs text-gray-400">17/20 Benar</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl shadow-sm">
+                    <div>
+                        <p class="font-bold text-gray-800">Quiz: Arsitektur Komputer</p>
+                        <p class="text-sm text-gray-500">Tanggal: 28 Sep 2023</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-lg font-bold text-orange-600">65 pt</span>
+                        <p class="text-xs text-gray-400">13/20 Benar</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl shadow-sm">
+                    <div>
+                        <p class="font-bold text-gray-800">Quiz: Sejarah Internet</p>
+                        <p class="text-sm text-gray-500">Tanggal: 20 Sep 2023</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-lg font-bold text-green-600">95 pt</span>
+                        <p class="text-xs text-gray-400">19/20 Benar</p>
+                    </div>
+                </div>
+                
+                </div>
+            <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-xl font-bold text-lg mt-6 shadow-md active:scale-95 transition-transform">
+                Lihat Semua Kuis
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Kelola Materi</title>
+    <style>
+        body { 
+            background-color: #6A4F6E; 
+            background-image: radial-gradient(circle, #857486 20%, transparent 20%); 
+            background-size: 80px 80px; 
+        }
+    </style>
+</head>
+<body class="pb-24 min-h-screen">
+    <div class="p-6 flex items-center text-white">
+        <a href="beranda_dsn.html" class="flex items-center active:scale-95 transition-transform">
+            <i class="fas fa-chevron-left text-2xl mr-4"></i>
+            <span class="text-2xl font-bold uppercase tracking-widest">BACK</span>
+        </a>
+    </div>
+
+    <div class="px-6">
+        <div class="bg-white/90 rounded-xl p-4 mb-8 shadow-md text-center">
+            <h1 class="text-2xl font-bold text-gray-800">Kelola Materi</h1>
+        </div>
+
+        <div class="space-y-4">
+            <div class="bg-white/90 rounded-[35px] p-6 shadow-lg flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800">Judul Materi A</h2>
+                    <p class="text-sm font-semibold text-gray-600">Mata Kuliah : Konsep Dasar</p>
+                    <p class="text-xs text-gray-500">File: materi-a.pdf</p>
+                </div>
+                <div class="flex flex-col gap-2 text-gray-700 font-bold">
+                    <a href="edit_materi.html" class="flex items-center gap-2 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-pencil-alt text-orange-400"></i> Edit
+                    </a>
+                    <button onclick="confirm('Hapus materi ini?')" class="flex items-center gap-2 hover:text-red-600 text-left transition-colors">
+                        <i class="fas fa-trash-alt text-gray-400"></i> Hapus
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-[35px] p-6 shadow-lg flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800">Judul Materi B</h2>
+                    <p class="text-sm font-semibold text-gray-600">Mata Kuliah : APSI</p>
+                    <p class="text-xs text-gray-500">File: materi-b.pdf</p>
+                </div>
+                <div class="flex flex-col gap-2 text-gray-700 font-bold">
+                    <a href="edit_materi.html" class="flex items-center gap-2"><i class="fas fa-pencil-alt text-orange-400"></i> Edit</a>
+                    <button class="flex items-center gap-2 text-left"><i class="fas fa-trash-alt text-gray-400"></i> Hapus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="tambah_materi.html" class="fixed bottom-8 right-8 w-16 h-16 bg-[#FCE4EC] rounded-full flex items-center justify-center shadow-2xl active:scale-90 transition-transform">
+        <i class="fas fa-plus text-2xl text-gray-600"></i>
+    </a>
+</body>
+</html>

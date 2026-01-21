@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Tambah Soal</title>
+</head>
+<body class="bg-[#6D5471] p-6 min-h-screen flex items-center justify-center">
+    <div class="bg-white w-full max-w-lg rounded-[40px] p-8 shadow-2xl my-10">
+        <div class="flex items-center mb-6">
+            <a href="bank_soal.html" class="text-[#6D5471] mr-4"><i class="fas fa-arrow-left text-xl"></i></a>
+            <h2 class="text-2xl font-bold text-[#6D5471]">Tambah Soal Baru</h2>
+        </div>
+        
+        <form action="bank_soal.html" class="space-y-4">
+            <div>
+                <label class="block font-bold text-gray-700 mb-2">Pertanyaan</label>
+                <textarea rows="3" placeholder="Tuliskan pertanyaan di sini..." class="w-full border-2 border-[#6D5471] rounded-2xl p-3 focus:outline-none focus:ring-2 ring-purple-100"></textarea>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block font-bold text-gray-700 mb-2 text-sm">Mata Kuliah</label>
+                    <select class="w-full border-2 border-[#6D5471] rounded-xl p-2 text-sm focus:outline-none">
+                        <option>Bahasa Inggris</option>
+                        <option>Struktur Data</option>
+                        <option>Sistem Operasi</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold text-gray-700 mb-2 text-sm">Durasi (Detik)</label>
+                    <input type="number" placeholder="30" class="w-full border-2 border-[#6D5471] rounded-xl p-2 text-sm focus:outline-none">
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <label class="block font-bold text-gray-700">Pilihan Jawaban</label>
+                
+                <div class="flex items-center gap-3">
+                    <input type="radio" name="correct" title="Pilih sebagai jawaban benar" checked>
+                    <input type="text" placeholder="Opsi A (Benar)" class="flex-1 border-2 border-green-500 rounded-xl p-2 text-sm focus:outline-none">
+                </div>
+                <div class="flex items-center gap-3">
+                    <input type="radio" name="correct">
+                    <input type="text" placeholder="Opsi B" class="flex-1 border-2 border-gray-200 rounded-xl p-2 text-sm focus:outline-none">
+                </div>
+                <div class="flex items-center gap-3">
+                    <input type="radio" name="correct">
+                    <input type="text" placeholder="Opsi C" class="flex-1 border-2 border-gray-200 rounded-xl p-2 text-sm focus:outline-none">
+                </div>
+                <div class="flex items-center gap-3">
+                    <input type="radio" name="correct">
+                    <input type="text" placeholder="Opsi D" class="flex-1 border-2 border-gray-200 rounded-xl p-2 text-sm focus:outline-none">
+                </div>
+            </div>
+
+            <div class="flex gap-3 pt-6">
+                <a href="bank_soal.html" class="flex-1 text-center py-3 border-2 border-[#6D5471] text-[#6D5471] rounded-2xl font-bold active:scale-95 transition-transform">Batal</a>
+                <button type="submit" class="flex-1 bg-[#E57373] text-white py-3 rounded-2xl font-bold shadow-lg active:scale-95 transition-transform">Simpan Soal</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
