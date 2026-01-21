@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Beranda Mahasiswa</title>
+    <style>
+        body { background-color: #A393A4; background-image: radial-gradient(circle, #857486 20%, transparent 20%), radial-gradient(circle, #857486 20%, transparent 20%); background-size: 100px 100px; background-position: 0 0, 50px 50px; }
+    </style>
+</head>
+<body class="p-6">
+    <h2 class="text-white text-xl font-bold mb-4">Beranda Mahasiswa</h2>
+    
+    <div class="bg-[#857486] rounded-3xl p-6 flex items-center shadow-xl mb-6">
+        <div class="bg-white/30 rounded-full p-4 mr-4">
+            <i class="fas fa-user text-white text-4xl"></i>
+        </div>
+        <div class="text-white">
+            <h3 class="text-2xl font-bold">Habib Iksan</h3>
+            <p>202332167</p>
+            <p>Sistem Informasi</p>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-3xl p-6 mb-6 shadow-lg">
+        <h4 class="font-bold mb-4">Progress Belajar Kamu</h4>
+        <div class="space-y-4">
+            <div>
+                <div class="flex justify-between text-sm font-bold mb-1"><span>Rekayasa Perangkat Lunak</span><span>80%</span></div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-[#6D5471] h-2.5 rounded-full" style="width: 80%"></div></div>
+            </div>
+            <div>
+                <div class="flex justify-between text-sm font-bold mb-1"><span>Tata Kelola TI</span><span>50%</span></div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-[#6D5471] h-2.5 rounded-full" style="width: 50%"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white p-6 rounded-3xl shadow-lg text-center">
+            <i class="fas fa-book-open text-4xl mb-2"></i>
+            <p class="font-semibold">Lihat Materi</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-lg text-center">
+            <i class="fas fa-pencil-alt text-4xl mb-2"></i>
+            <p class="font-semibold">Kerjakan Quiz</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-lg text-center">
+            <i class="fas fa-chart-line text-4xl mb-2"></i>
+            <p class="font-semibold">Leaderboard</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-lg text-center">
+            <i class="fas fa-database text-4xl mb-2"></i>
+            <p class="font-semibold">Nilai</p>
+        </div>
+    </div>
+
+    <script>
+        // Jalankan saat halaman dimuat
+        window.onload = function() {
+            const namaUser = localStorage.getItem('userName');
+            if (namaUser) {
+                // Cari elemen h3 di dalam profile card dan ganti teksnya
+                document.querySelector('h3').innerText = namaUser;
+            }
+        };
+    </script>
+</body>
+</html>

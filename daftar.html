@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Daftar</title>
+</head>
+<body class="bg-white min-h-screen pb-10">
+    <div class="bg-[#6D5471] p-4 flex items-center text-white">
+        <a href="index.html"><i class="fas fa-chevron-left text-2xl mr-4"></i></a>
+        <h1 class="text-xl font-bold uppercase">Daftar</h1>
+    </div>
+
+    <div class="p-8 space-y-4">
+        <div>
+            <label class="block font-bold">Email</label>
+            <input type="email" id="reg-email" class="w-full border-2 border-black rounded-xl p-3 focus:outline-none">
+        </div>
+        <div>
+            <label class="block font-bold">Nama Lengkap</label>
+            <input type="text" id="reg-nama" class="w-full border-2 border-black rounded-xl p-3 focus:outline-none">
+        </div>
+        <div>
+            <label class="block font-bold">Kata Sandi</label>
+            <input type="password" id="reg-sandi" class="w-full border-2 border-black rounded-xl p-3 focus:outline-none">
+        </div>
+        <div>
+            <label class="block font-bold">Ketik Ulang Sandi</label>
+            <input type="password" id="reg-confirm-sandi" class="w-full border-2 border-black rounded-xl p-3 focus:outline-none">
+        </div>
+
+        <p class="text-center font-bold mt-4">Pilih Peran</p>
+        <div class="flex gap-4">
+            <button id="btn-dosen" type="button" class="flex-1 bg-[#E57373] text-white py-3 rounded-2xl font-bold transition-all">Dosen</button>
+            <button id="btn-pelajar" type="button" class="flex-1 border-2 border-black text-[#E57373] py-3 rounded-2xl font-bold transition-all">Pelajar</button>
+        </div>
+
+        <button id="btn-daftar" class="w-full bg-[#E57373] text-white py-4 rounded-2xl font-bold text-lg mt-6 uppercase shadow-lg active:scale-95 transition-transform">Daftar</button>
+
+        <p class="text-center font-semibold mt-4">Sudah punya akun? <a href="login.html" class="text-[#E57373]">Masuk</a></p>
+    </div>
+
+    <script>
+        // 1. Inisialisasi State
+        let selectedRole = 'dosen'; 
+        
+        // 2. Ambil Elemen
+        const btnDosen = document.getElementById('btn-dosen');
+        const btnPelajar = document.getElementById('btn-pelajar');
+        const btnDaftar = document.getElementById('btn-daftar');
+
+        // 3. Fungsi Toggle Warna Tombol
+        function setRole(role) {
+            selectedRole = role;
+            if (role === 'dosen') {
+                btnDosen.className = "flex-1 bg-[#E57373] text-white py-3 rounded-2xl font-bold transition-all";
+                btnPelajar.className = "flex-1 border-2 border-black text-[#E57373] py-3 rounded-2xl font-bold transition-all";
+            } else {
+                btnPelajar.className = "flex-1 bg-[#E57373] text-white py-3 rounded-2xl font-bold transition-all";
+                btnDosen.className = "flex-1 border-2 border-black text-[#E57373] py-3 rounded-2xl font-bold transition-all";
+            }
+        }
+
+        // 4. Event Listener Peran
+        btnDosen.addEventListener('click', () => setRole('dosen'));
+        btnPelajar.addEventListener('click', () => setRole('pelajar'));
+
+        // 5. Logika Simpan Data & Redirect
+        btnDaftar.addEventListener('click', function() {
+            const email = document.getElementById('reg-email').value;
+            const nama = document.getElementById('reg-nama').value;
+            const sandi = document.getElementById('reg-sandi').value;
+            const konfirmasiSandi = document.getElementById('reg-confirm-sandi').value;
+
+            // Validasi Sederhana
+            if (!email || !nama || !sandi) {
+                alert("Harap isi semua kolom!");
+                return;
+            }
+
+            if (sandi !== konfirmasiSandi) {
+                alert("Kata sandi dan ketik ulang sandi tidak cocok!");
+                return;
+            }
+
+            // Simpan ke LocalStorage
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userName', nama);
+            localStorage.setItem('userPassword', sandi);
+            localStorage.setItem('userRole', selectedRole);
+
+            alert("Pendaftaran Berhasil sebagai " + selectedRole + "!");
+            
+            // Redirect berdasarkan peran
+            if (selectedRole === 'dosen') {
+                window.location.href = 'beranda_dsn.html';
+            } else {
+                window.location.href = 'beranda_mhs.html';
+            }
+        });
+    </script>
+</body>
+</html>

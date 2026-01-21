@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Masuk</title>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="bg-[#6D5471] p-4 flex items-center text-white">
+        <a href="index.html"><i class="fas fa-chevron-left text-2xl mr-4"></i></a>
+        <h1 class="text-xl font-bold uppercase">Masuk</h1>
+    </div>
+
+    <div class="p-8 mt-10">
+        <div class="mb-6">
+            <label class="block text-black font-bold mb-2">Email</label>
+            <input type="email" class="w-full border-2 border-black rounded-xl p-3 focus:outline-none">
+        </div>
+        <div class="mb-2">
+            <label class="block text-black font-bold mb-2">Kata Sandi</label>
+            <input type="password" class="w-full border-2 border-black rounded-xl p-3 focus:outline-none">
+        </div>
+        <div class="text-right mb-10">
+            <a href="#" class="text-[#E57373] font-semibold">Lupa kata sandi?</a>
+        </div>
+
+        <button class="w-full bg-[#E57373] text-white py-4 rounded-2xl font-bold text-lg mb-4 uppercase">Masuk</button>
+        <p class="text-center text-black font-semibold">Belum punya akun? <a href="daftar.html" class="text-[#E57373]">Daftar</a></p>
+    </div>
+
+    <div class="p-8 mt-10">
+    <div class="mb-6">
+        <label class="block text-black font-bold mb-2">Email</label>
+        <input type="email" id="login-email" class="w-full border-2 border-black rounded-xl p-3 focus:outline-none">
+    </div>
+    <div class="mb-2">
+        <label class="block text-black font-bold mb-2">Kata Sandi</label>
+        <input type="password" id="login-sandi" class="w-full border-2 border-black rounded-xl p-3 focus:outline-none">
+    </div>
+    <button id="btn-masuk" class="w-full bg-[#E57373] text-white py-4 rounded-2xl font-bold text-lg mb-4 uppercase">Masuk</button>
+</div>
+
+<script>
+    document.getElementById('btn-masuk').addEventListener('click', function() {
+        const emailInput = document.getElementById('login-email').value;
+        const sandiInput = document.getElementById('login-sandi').value;
+
+        // Ambil data yang tersimpan
+        const storedEmail = localStorage.getItem('userEmail');
+        const storedSandi = localStorage.getItem('userPassword');
+        const storedRole = localStorage.getItem('userRole');
+
+        if (emailInput === storedEmail && sandiInput === storedSandi) {
+            alert("Login Berhasil!");
+            if (storedRole === 'dosen') {
+                window.location.href = 'beranda_dsn.html';
+            } else {
+                window.location.href = 'beranda_mhs.html';
+            }
+        } else {
+            alert("Email atau Kata Sandi salah!");
+        }
+    });
+</script>
+</body>
+</html>
