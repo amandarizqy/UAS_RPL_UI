@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Admin - Kelola Mata Kuliah</title>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="p-6 bg-white border-b flex items-center justify-between sticky top-0 z-20 shadow-sm">
+        <div class="flex items-center gap-4">
+            <a href="admin_dashboard.html" class="text-gray-600 hover:text-[#6D5471] transition-colors">
+                <i class="fas fa-arrow-left text-xl"></i>
+            </a>
+            <h1 class="text-xl font-bold text-gray-800">Database Mata Kuliah</h1>
+        </div>
+        <a href="admin_tambah_course.html" class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-xl text-sm font-bold shadow-md transition-all active:scale-95">
+            <i class="fas fa-plus mr-2"></i> Tambah Matkul
+        </a>
+    </div>
+
+    <div class="p-6">
+        <div class="overflow-x-auto bg-white rounded-2xl shadow-sm">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-gray-100 text-gray-600 text-xs uppercase tracking-wider">
+                    <tr>
+                        <th class="p-4 font-bold">Kode</th>
+                        <th class="p-4 font-bold">Nama Mata Kuliah</th>
+                        <th class="p-4 font-bold">Program Studi</th>
+                        <th class="p-4 text-center font-bold">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-sm">
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="p-4 font-mono text-gray-500">SI-101</td>
+                        <td class="p-4 font-bold text-gray-800">Sistem Informasi</td>
+                        <td class="p-4 text-gray-600">Sistem Informasi</td>
+                        <td class="p-4 text-center">
+                            <div class="flex justify-center gap-3">
+                                <a href="admin_edit_course.html" class="text-blue-500 hover:bg-blue-50 p-2 rounded-lg transition-colors">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <button class="text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="p-4 font-mono text-gray-500">MK-202</td>
+                        <td class="p-4 font-bold text-gray-800">Struktur Data</td>
+                        <td class="p-4 text-gray-600">Teknik Informatika</td>
+                        <td class="p-4 text-center">
+                            <div class="flex justify-center gap-3">
+                                <a href="admin_edit_course.html" class="text-blue-500 hover:bg-blue-50 p-2 rounded-lg transition-colors">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <button class="text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

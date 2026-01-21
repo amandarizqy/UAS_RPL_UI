@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Admin - Tambah User</title>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="bg-white w-full max-w-lg rounded-3xl shadow-xl overflow-hidden">
+        <div class="bg-[#6D5471] p-6 text-white text-center">
+            <h2 class="text-xl font-bold uppercase tracking-widest">Registrasi User Baru</h2>
+        </div>
+        
+        <form action="admin_users.html" class="p-8 space-y-5">
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Nama Lengkap</label>
+                <input type="text" placeholder="Masukkan nama lengkap..." class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-[#6D5471] outline-none">
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">NIM / NIP</label>
+                <input type="text" placeholder="Masukkan nomor identitas..." class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-[#6D5471] outline-none">
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Peran (Role)</label>
+                <select class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-[#6D5471] outline-none bg-white">
+                    <option value="mahasiswa">Mahasiswa</option>
+                    <option value="dosen">Dosen</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">Password Default</label>
+                <input type="password" placeholder="••••••••" class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-[#6D5471] outline-none">
+            </div>
+
+            <div class="flex gap-4 pt-4">
+                <a href="admin_users.html" class="flex-1 text-center py-3 bg-gray-200 text-gray-700 rounded-xl font-bold hover:bg-gray-300 transition-colors">Batal</a>
+                <button type="submit" class="flex-1 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 shadow-lg transition-transform active:scale-95">Simpan User</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
