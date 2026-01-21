@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Leaderboard</title>
+    <style>
+        body { background-color: #6A4F6E; }
+        .podium-box { clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%); }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="p-6 flex items-center text-white">
+        <a href="beranda_mhs.html"><i class="fas fa-chevron-left text-2xl mr-4"></i></a>
+        <h1 class="text-2xl font-bold uppercase tracking-widest">BACK</h1>
+    </div>
+
+    <div class="flex justify-around text-white font-semibold mb-10 px-6">
+        <div class="border-b-4 border-white pb-1">Kelas</div>
+        <div class="opacity-60">Prodi</div>
+        <div class="opacity-60">Fakultas</div>
+    </div>
+
+    <div class="flex justify-center items-end gap-2 px-4 mb-0">
+        <div class="flex flex-col items-center">
+            <img src="path/avatar2.jpg" class="w-16 h-16 rounded-full border-4 border-[#C1D7AE] mb-2 object-cover">
+            <div class="bg-[#C1D7AE] w-24 h-32 flex flex-col items-center justify-center rounded-t-lg shadow-lg">
+                <span class="text-white text-4xl font-bold">2</span>
+                <span class="text-white text-xs opacity-75">442pt</span>
+            </div>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="path/avatar1.jpg" class="w-20 h-20 rounded-full border-4 border-[#E57373] mb-2 object-cover">
+            <div class="bg-[#E57373] w-28 h-40 flex flex-col items-center justify-center rounded-t-lg shadow-xl relative z-10">
+                <span class="text-white text-5xl font-bold">1</span>
+                <span class="text-white text-sm opacity-75">453pt</span>
+            </div>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="path/avatar3.jpg" class="w-16 h-16 rounded-full border-4 border-[#C1D7AE] mb-2 object-cover">
+            <div class="bg-[#C1D7AE] w-24 h-24 flex flex-col items-center justify-center rounded-t-lg shadow-lg">
+                <span class="text-white text-4xl font-bold">3</span>
+                <span class="text-white text-xs opacity-75">433pt</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-t-[40px] p-6 space-y-6 min-h-[400px]">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="path/amanda.jpg" class="w-12 h-12 rounded-full object-cover">
+                <span class="font-bold text-gray-700">Amanda</span>
+            </div>
+            <span class="bg-purple-50 text-purple-600 px-4 py-1 rounded-full text-sm font-bold">223pt</span>
+        </div>
+
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <span class="text-gray-400 font-bold w-6 text-center">05</span>
+                <img src="path/user05.jpg" class="w-12 h-12 rounded-full object-cover">
+                <span class="font-bold text-gray-700">Zahratul Ahya</span>
+            </div>
+            <span class="bg-purple-50 text-purple-600 px-4 py-1 rounded-full text-sm font-bold">160pt</span>
+        </div>
+
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <span class="text-gray-400 font-bold w-6 text-center">06</span>
+                <img src="path/user06.jpg" class="w-12 h-12 rounded-full object-cover">
+                <span class="font-bold text-gray-700">Ahmad Fadel B</span>
+            </div>
+            <span class="bg-purple-50 text-purple-600 px-4 py-1 rounded-full text-sm font-bold">140pt</span>
+        </div>
+
+        </div>
+</body>
+</html>
