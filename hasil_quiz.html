@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Hasil Kuis</title>
+    <style>
+        body { 
+            background-color: #6A4F6E; 
+            background-image: radial-gradient(circle, #857486 20%, transparent 20%); 
+            background-size: 100px 100px; 
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <div class="p-6 flex items-center text-white">
+        <a href="quiz.html" class="flex items-center active:scale-95 transition-transform">
+            <i class="fas fa-chevron-left text-2xl mr-4"></i>
+            <span class="text-2xl font-bold uppercase tracking-widest">BACK</span>
+        </a>
+    </div>
+
+    <div class="flex-1 px-6 flex flex-col items-center">
+        
+        <div class="relative flex items-center justify-center mb-10 mt-4">
+            <div class="w-64 h-64 rounded-full bg-white/10 flex items-center justify-center">
+                <div class="w-52 h-52 rounded-full bg-white/20 flex items-center justify-center">
+                    <div class="w-40 h-40 rounded-full bg-white flex flex-col items-center justify-center shadow-lg">
+                        <p class="text-[#6D5471] font-semibold text-sm">your Score</p>
+                        <div class="flex items-baseline">
+                            <h1 class="text-5xl font-bold text-[#6D5471]">100</h1>
+                            <span class="text-[#6D5471] ml-1 font-bold">pt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-[40px] w-full p-8 shadow-2xl z-10">
+            <div class="grid grid-cols-2 gap-y-8">
+                <div class="flex items-start gap-3">
+                    <div class="w-4 h-4 rounded-full bg-purple-600 mt-1"></div>
+                    <div>
+                        <h4 class="text-purple-600 font-bold text-xl">100%</h4>
+                        <p class="text-gray-500 text-sm">Completion</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-4 h-4 rounded-full bg-purple-600 mt-1"></div>
+                    <div>
+                        <h4 class="text-purple-600 font-bold text-xl">20</h4>
+                        <p class="text-gray-500 text-sm">Total Question</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-4 h-4 rounded-full bg-green-600 mt-1"></div>
+                    <div>
+                        <h4 class="text-green-600 font-bold text-xl">13</h4>
+                        <p class="text-gray-500 text-sm">Correct</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-4 h-4 rounded-full bg-red-500 mt-1"></div>
+                    <div>
+                        <h4 class="text-red-500 font-bold text-xl">07</h4>
+                        <p class="text-gray-500 text-sm">Wrong</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full bg-white mt-10 p-6 rounded-[40px] mb-10">
+            <div class="grid grid-cols-3 gap-6">
+                <a href="quiz.html" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 rounded-full bg-[#3085A3] flex items-center justify-center text-white text-xl shadow-lg active:scale-90 transition-transform">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-[10px] text-center">Play Again</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 rounded-full bg-[#C29574] flex items-center justify-center text-white text-xl shadow-lg active:scale-90 transition-transform">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-[10px] text-center">Review Answer</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 rounded-full bg-[#6A89CC] flex items-center justify-center text-white text-xl shadow-lg active:scale-90 transition-transform">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-[10px] text-center">Share Score</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 rounded-full bg-[#3FB195] flex items-center justify-center text-white text-xl shadow-lg active:scale-90 transition-transform">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-[10px] text-center">Generate PDF</span>
+                </a>
+                <a href="beranda_mhs.html" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 rounded-full bg-[#A291E3] flex items-center justify-center text-white text-xl shadow-lg active:scale-90 transition-transform">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-[10px] text-center">Home</span>
+                </a>
+                <a href="leaderboard.html" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 rounded-full bg-[#636E72] flex items-center justify-center text-white text-xl shadow-lg active:scale-90 transition-transform">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-[10px] text-center">Leaderboard</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

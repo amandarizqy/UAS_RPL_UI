@@ -8,38 +8,55 @@
     <title>Learnalyze - Leaderboard</title>
     <style>
         body { background-color: #6A4F6E; }
-        .podium-box { clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%); }
+        /* Transisi halus untuk underline */
+        .tab-item { transition: all 0.3s ease; cursor: pointer; }
     </style>
 </head>
 <body class="min-h-screen">
     <div class="p-6 flex items-center text-white">
-        <a href="beranda_mhs.html"><i class="fas fa-chevron-left text-2xl mr-4"></i></a>
+        <a href="beranda_mhs.html" class="active:scale-90 transition-transform">
+            <i class="fas fa-chevron-left text-2xl mr-4"></i>
+        </a>
         <h1 class="text-2xl font-bold uppercase tracking-widest">BACK</h1>
     </div>
 
-    <div class="flex justify-around text-white font-semibold mb-10 px-6">
-        <div class="border-b-4 border-white pb-1">Kelas</div>
-        <div class="opacity-60">Prodi</div>
-        <div class="opacity-60">Fakultas</div>
+    <div class="px-6 mb-10">
+        <div id="tab-container" class="bg-[#4F3B52] rounded-full p-2 flex justify-around items-center text-white font-semibold shadow-lg">
+            <div class="tab-item border-b-2 border-white pb-1 px-4 transition-all duration-300 cursor-pointer" onclick="switchTab(this)">
+                Kelas
+            </div>
+            <div class="tab-item opacity-60 pb-1 px-4 transition-all duration-300 cursor-pointer" onclick="switchTab(this)">
+                Prodi
+            </div>
+            <div class="tab-item opacity-60 pb-1 px-4 transition-all duration-300 cursor-pointer" onclick="switchTab(this)">
+                Fakultas
+            </div>
+        </div>
     </div>
 
     <div class="flex justify-center items-end gap-2 px-4 mb-0">
         <div class="flex flex-col items-center">
-            <img src="path/avatar2.jpg" class="w-16 h-16 rounded-full border-4 border-[#C1D7AE] mb-2 object-cover">
+            <div class="w-16 h-16 rounded-full border-4 border-[#C1D7AE] mb-2 bg-gray-200 flex items-center justify-center">
+                <i class="fas fa-user text-2xl text-gray-500"></i>
+            </div>
             <div class="bg-[#C1D7AE] w-24 h-32 flex flex-col items-center justify-center rounded-t-lg shadow-lg">
                 <span class="text-white text-4xl font-bold">2</span>
                 <span class="text-white text-xs opacity-75">442pt</span>
             </div>
         </div>
         <div class="flex flex-col items-center">
-            <img src="path/avatar1.jpg" class="w-20 h-20 rounded-full border-4 border-[#E57373] mb-2 object-cover">
+            <div class="w-20 h-20 rounded-full border-4 border-[#E57373] mb-2 bg-gray-200 flex items-center justify-center">
+                <i class="fas fa-user text-3xl text-gray-500"></i>
+            </div>
             <div class="bg-[#E57373] w-28 h-40 flex flex-col items-center justify-center rounded-t-lg shadow-xl relative z-10">
                 <span class="text-white text-5xl font-bold">1</span>
                 <span class="text-white text-sm opacity-75">453pt</span>
             </div>
         </div>
         <div class="flex flex-col items-center">
-            <img src="path/avatar3.jpg" class="w-16 h-16 rounded-full border-4 border-[#C1D7AE] mb-2 object-cover">
+            <div class="w-16 h-16 rounded-full border-4 border-[#C1D7AE] mb-2 bg-gray-200 flex items-center justify-center">
+                <i class="fas fa-user text-2xl text-gray-500"></i>
+            </div>
             <div class="bg-[#C1D7AE] w-24 h-24 flex flex-col items-center justify-center rounded-t-lg shadow-lg">
                 <span class="text-white text-4xl font-bold">3</span>
                 <span class="text-white text-xs opacity-75">433pt</span>
@@ -50,7 +67,10 @@
     <div class="bg-white rounded-t-[40px] p-6 space-y-6 min-h-[400px]">
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <img src="path/amanda.jpg" class="w-12 h-12 rounded-full object-cover">
+                <span class="text-gray-400 font-bold w-6 text-center">04</span>
+                <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-user text-gray-400"></i>
+                </div>
                 <span class="font-bold text-gray-700">Amanda</span>
             </div>
             <span class="bg-purple-50 text-purple-600 px-4 py-1 rounded-full text-sm font-bold">223pt</span>
@@ -59,7 +79,9 @@
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-4">
                 <span class="text-gray-400 font-bold w-6 text-center">05</span>
-                <img src="path/user05.jpg" class="w-12 h-12 rounded-full object-cover">
+                <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-user text-gray-400"></i>
+                </div>
                 <span class="font-bold text-gray-700">Zahratul Ahya</span>
             </div>
             <span class="bg-purple-50 text-purple-600 px-4 py-1 rounded-full text-sm font-bold">160pt</span>
@@ -68,12 +90,30 @@
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-4">
                 <span class="text-gray-400 font-bold w-6 text-center">06</span>
-                <img src="path/user06.jpg" class="w-12 h-12 rounded-full object-cover">
+                <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-user text-gray-400"></i>
+                </div>
                 <span class="font-bold text-gray-700">Ahmad Fadel B</span>
             </div>
             <span class="bg-purple-50 text-purple-600 px-4 py-1 rounded-full text-sm font-bold">140pt</span>
         </div>
+    </div>
 
-        </div>
+    <script>
+        function switchTab(element) {
+            // Ambil semua elemen tab
+            const tabs = document.querySelectorAll('.tab-item');
+            
+            // Reset semua tab (hapus border dan turunkan opacity)
+            tabs.forEach(tab => {
+                tab.classList.remove('border-b-4', 'border-white');
+                tab.classList.add('opacity-60');
+            });
+
+            // Aktifkan tab yang diklik
+            element.classList.add('border-b-4', 'border-white');
+            element.classList.remove('opacity-60');
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Learnalyze - Mengerjakan Quiz</title>
+    <style>
+        body { 
+            background-color: #6A4F6E; 
+            background-image: radial-gradient(circle, #857486 20%, transparent 20%); 
+            background-size: 100px 100px; 
+        }
+        /* Custom progress ring for timer */
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <div class="p-6 flex justify-between items-center text-white">
+        <a href="materi_quiz.html" class="flex items-center active:scale-95 transition-transform">
+            <i class="fas fa-chevron-left text-2xl mr-4"></i>
+            <span class="text-2xl font-bold uppercase tracking-widest">BACK</span>
+        </a>
+        <button class="text-3xl">
+            <i class="fas fa-sliders-h"></i>
+        </button>
+    </div>
+
+    <div class="flex-1 px-6 flex flex-col items-center">
+        
+        <div class="relative flex items-center justify-center mb-[-60px] z-20">
+            <svg class="w-32 h-32">
+                <circle class="text-white/20" stroke-width="8" stroke="currentColor" fill="white" r="50" cx="64" cy="64"/>
+                <circle class="text-[#6D5471] progress-ring-circle" stroke-width="8" stroke-dasharray="314.159" stroke-dashoffset="100" stroke-linecap="round" stroke="currentColor" fill="transparent" r="50" cx="64" cy="64"/>
+            </svg>
+            <span class="absolute text-3xl font-bold text-[#6D5471]">18</span>
+        </div>
+
+        <div class="bg-white rounded-[40px] w-full p-8 pt-20 shadow-xl text-center z-10">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-green-600 font-bold">05</span>
+                    <div class="w-16 h-2.5 bg-green-500 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-16 h-2.5 bg-orange-600 rounded-full"></div>
+                    <span class="text-orange-600 font-bold">07</span>
+                </div>
+            </div>
+
+            <p class="text-[#6D5471] font-semibold mb-6">Question 13/20</p>
+            
+            <h2 class="text-2xl font-bold text-gray-800 leading-snug">
+                How many students in your class <br> _from korea?
+            </h2>
+        </div>
+
+        <div id="quiz-options" class="w-full mt-8 space-y-4 pb-10">
+    
+            <label class="block cursor-pointer">
+                <input type="radio" name="quiz" value="A" class="hidden peer">
+                <div class="flex justify-between items-center bg-white border-2 border-purple-400 rounded-2xl p-5 
+                            peer-checked:bg-[#F3E8FF] peer-checked:border-[#6D5471] peer-checked:ring-2 peer-checked:ring-[#6D5471]/20 
+                            transition-all duration-200 active:scale-[0.98]">
+                    <span class="text-xl font-bold text-gray-700">Comes</span>
+                    <div class="w-8 h-8 rounded-full border-2 border-gray-300 peer-checked:border-[#6D5471] flex items-center justify-center transition-colors">
+                        <div class="w-4 h-4 rounded-full bg-[#6D5471] scale-0 peer-checked:scale-100 transition-transform duration-200"></div>
+                    </div>
+                </div>
+            </label>
+
+            <label class="block cursor-pointer">
+                <input type="radio" name="quiz" value="B" class="hidden peer">
+                <div class="flex justify-between items-center bg-white border-2 border-purple-400 rounded-2xl p-5 
+                            peer-checked:bg-[#F3E8FF] peer-checked:border-[#6D5471] peer-checked:ring-2 peer-checked:ring-[#6D5471]/20 
+                            transition-all duration-200 active:scale-[0.98]">
+                    <span class="text-xl font-bold text-gray-700">Come</span>
+                    <div class="w-8 h-8 rounded-full border-2 border-gray-300 peer-checked:border-[#6D5471] flex items-center justify-center transition-colors">
+                        <div class="w-4 h-4 rounded-full bg-[#6D5471] scale-0 peer-checked:scale-100 transition-transform duration-200"></div>
+                    </div>
+                </div>
+            </label>
+
+            <label class="block cursor-pointer">
+                <input type="radio" name="quiz" value="C" class="hidden peer">
+                <div class="flex justify-between items-center bg-white border-2 border-purple-400 rounded-2xl p-5 
+                            peer-checked:bg-[#F3E8FF] peer-checked:border-[#6D5471] peer-checked:ring-2 peer-checked:ring-[#6D5471]/20 
+                            transition-all duration-200 active:scale-[0.98]">
+                    <span class="text-xl font-bold text-gray-700">Are coming</span>
+                    <div class="w-8 h-8 rounded-full border-2 border-gray-300 peer-checked:border-[#6D5471] flex items-center justify-center transition-colors">
+                        <div class="w-4 h-4 rounded-full bg-[#6D5471] scale-0 peer-checked:scale-100 transition-transform duration-200"></div>
+                    </div>
+                </div>
+            </label>
+
+            <label class="block cursor-pointer">
+                <input type="radio" name="quiz" value="D" class="hidden peer">
+                <div class="flex justify-between items-center bg-white border-2 border-purple-400 rounded-2xl p-5 
+                            peer-checked:bg-[#F3E8FF] peer-checked:border-[#6D5471] peer-checked:ring-2 peer-checked:ring-[#6D5471]/20 
+                            transition-all duration-200 active:scale-[0.98]">
+                    <span class="text-xl font-bold text-gray-700">Came</span>
+                    <div class="w-8 h-8 rounded-full border-2 border-gray-300 peer-checked:border-[#6D5471] flex items-center justify-center transition-colors">
+                        <div class="w-4 h-4 rounded-full bg-[#6D5471] scale-0 peer-checked:scale-100 transition-transform duration-200"></div>
+                    </div>
+                </div>
+            </label>
+        </div>
+    <script>
+        // Simulasi perubahan tampilan saat opsi dipilih
+        const options = document.querySelectorAll('input[name="quiz"]');
+        options.forEach(option => {
+            option.addEventListener('change', (e) => {
+                console.log("Jawaban dipilih: ", e.target.parentElement.innerText);
+                // Kamu bisa menambahkan logika verifikasi jawaban di sini
+            });
+        });
+    </script>
+</body>
+</html>
